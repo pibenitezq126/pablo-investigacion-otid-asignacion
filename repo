@@ -1,0 +1,9 @@
+mkdir otid-asignaciones
+cd otid-asignaciones
+mkdir -p 01-calculadora-ia
+git init
+git add .
+git commit -m "Asignación 1: calculadora generada con IA"
+git branch -M main
+git remote add origin https://github.com/pibenitezq126/pablo-investigacion-otid-asignacion.git
+git push -u origin main
