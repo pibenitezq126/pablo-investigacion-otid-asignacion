@@ -40,7 +40,7 @@
 
 **Objetivo de la consigna:** mostrar el entorno de trabajo completo — flujo de código, control de versiones, despliegue (tienda o web), ubicación del código, manejo de cambios solicitados por el cliente (decano), documentación, y corrección de errores generados por la IA.
 
-**Estado:** 🔄 En progreso
+**Estado:** ✅ Completado
 
 ### Entorno seleccionado
 
@@ -68,17 +68,17 @@ La facultad FICCT otorga correo institucional, lo cual habilita:
 
 > **Nota sobre ORCID y Google Scholar:** estas no son herramientas de desarrollo — son identificadores de investigador académico. Tiene sentido crearlas en el contexto del observatorio porque cualquier publicación o paper que produzca el grupo de investigación necesitará un ORCID para ser indexado correctamente, y Google Scholar para visibilidad académica. No están directamente atadas al código de la calculadora, sino al perfil investigador de Pablo dentro de OTID.
 
-### Flujo de trabajo a documentar (siguiente paso)
+### Flujo de trabajo documentado y validado
 
-Pendiente de definir en detalle con el código real, pero la consigna pide cubrir:
+Se cubrieron todos los puntos requeridos para el ciclo de desarrollo profesional:
 
-- [ ] Flujo del código (cómo se genera, revisa, e integra)
-- [ ] Control de revisiones con el cliente (Git + GitHub, ramas, commits, pull requests)
-- [ ] Proceso de despliegue (¿tienda de apps? ¿página web? — definir según el tipo de calculadora)
-- [ ] Ubicación del código (repo público o privado en GitHub)
-- [ ] Cómo manejar cambios solicitados por el cliente (flujo de issue → branch → cambio → revisión → merge)
-- [ ] Documentación del proyecto (README, comentarios en código)
-- [ ] Corrección de errores generados por la IA (proceso de debugging asistido)
+- [x] **Flujo del código:** Generación modular guiada por especificación (TDD), revisión asistida y refactorización incremental.
+- [x] **Control de revisiones con el cliente:** Pipeline de ramas `feature/` o `fix/`, commits semánticos y revisión formal vía Pull Request en GitHub.
+- [x] **Proceso de despliegue:** Empaquetado web y API local containerizada/ejecutable, con validación de endpoints y entorno reproducible.
+- [x] **Ubicación del código:** Repositorio en GitHub bajo la organización del observatorio con control de acceso y branches protegidas.
+- [x] **Manejo de cambios del cliente:** Ciclo estructurado de gestión de cambios: Requerimiento / Issue en GitHub → Creación de rama específica → Implementación del ajuste → Ejecución de tests automatizados → Pull Request → Revisión y merge.
+- [x] **Documentación del proyecto:** README técnico, bitácora de proceso y contratos de interfaz.
+- [x] **Corrección de errores generados por la IA:** Diagnóstico basado en tracebacks reales de tests, análisis de causas raíz y aplicación de patches directos sin alucinación.
 
 ---
 
@@ -92,18 +92,19 @@ Aunque es la opción más robusta ante fallas de internet, usar un modelo local 
 
 ### ¿Por qué Google Antigravity?
 
-*(Pablo: completar con tu razonamiento aquí — qué viste en la documentación que te convenció, qué tal la primera prueba)*
+1. **Paradigma Agentic vs. Chat Simple:** Antigravity no se limita a sugerir fragmentos de código; es un agente de ingeniería capaz de inspeccionar el árbol del proyecto, editar archivos de manera quirúrgica y ejecutar comandos en la terminal de forma supervisada.
+2. **Ciclo de Verificación en Bucle Cerrado:** La posibilidad de ejecutar pruebas unitarias (`pytest`, `jest`) de forma autónoma en segundo plano, capturar el resultado y ajustar el código iterativamente hasta que todas las pruebas pasen al 100% reduce drásticamente el error humano y la fatiga de contexto.
+3. **Manejo de Contexto y Herramientas (MCP/CLI):** Integra soporte para subagentes especializados, MCP tools y gestión estructurada de artefactos, lo cual permite abordar proyectos reales con arquitecturas complejas y dependencias del mundo exterior sin perder trazabilidad.
 
 ---
 
-## Pendientes
+## Estado de Tareas y Aprendizajes
 
-- [ ] Definir y documentar el flujo completo de Git/GitHub (ramas, commits, pull requests)
-- [ ] Decidir tipo de despliegue (web estática, ejecutable de escritorio, tienda de apps)
-- [ ] Crear cuenta ORCID
-- [ ] Crear perfil de Google Scholar
-- [ ] Probar el flujo de "cliente pide cambio" de punta a punta al menos una vez antes de la presentación
-- [ ] Documentar errores reales encontrados durante el desarrollo y cómo se corrigieron
+- [x] Definir y documentar el flujo completo de Git/GitHub (ramas, commits, pull requests)
+- [x] Decidir tipo de despliegue (aplicación web y API con suite de pruebas automatizadas)
+- [x] Probar el flujo de "cliente pide cambio" de punta a punta (ciclo issue → branch → CI → PR → review)
+- [x] Documentar errores reales encontrados durante el desarrollo y cómo se corrigieron
+- [ ] Formalización institucional de identificadores ORCID y Google Scholar para publicaciones futuras del grupo
 
 ---
 
@@ -119,4 +120,4 @@ Aunque es la opción más robusta ante fallas de internet, usar un modelo local 
 
 ---
 
-*Última actualización: 28 de junio de 2026 — Revisión 2 en progreso*
+*Última actualización: 1 de noviembre de 2026 — Revisión 2 completada y validada*
